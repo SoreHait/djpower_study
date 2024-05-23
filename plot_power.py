@@ -29,7 +29,7 @@ for root, _, files in dataset:
                     r_p_dpu[idx].append(r_p_dpu[idx-1][2])
         print(diff)
         print('\n'.join(map(str, r_p_dpu)))
-        axis.plot([x[0] for x in r_p_dpu[1:]], [x[2] for x in r_p_dpu[1:]], label=diff, marker='o')
+        axis.plot([x[0] for x in r_p_dpu[1:]], [x[1] for x in r_p_dpu[1:]], label=diff, marker='o')
 
 # x = np.arange(96, 100, 0.01)
 
