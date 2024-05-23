@@ -27,6 +27,8 @@ for root, _, files in dataset:
                 r_p_dpu.append([])
                 r_p_dpu[-1].append(float(row['rate']))
                 r_p_dpu[-1].append(float(row['power']))
+        if len(r_p_dpu) <= 1:
+            continue
         r_p_dpu.sort(key=lambda x: x[0])
         for idx, (rate, power) in enumerate(r_p_dpu):
             if idx != 0:
@@ -41,10 +43,10 @@ for root, _, files in dataset:
         # axis.plot3D([x[0] for x in r_p_dpu], [y_axis] * len(r_p_dpu), [x[1] for x in r_p_dpu], label=diff, marker='o')
         # y_axis += 1
 
-# x = np.arange(96, 100, 0.01)
+x = np.arange(-1, 1, 0.001)
 
-# sc4 di_co=26 >99.0 y = 4.01864864864875x − 341.67320270271273
-# axis.plot(x, 2.6 * x - 339.8)
-# axis.scatter(100, 100 * 2.6 - 339.8)
+# maybe it's a curve...
+# y = a tanh(b(x-95)+c)+d
+# axis.plot(x ** 3 + x + 95, x)
 axis.legend()
 plt.show()
