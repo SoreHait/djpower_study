@@ -6,4 +6,6 @@
 
 以`rate,power`的格式填写
 
+文件名为难度，NM/HD/MX直接写数字，SC写sc几
+
 pr大欢迎
