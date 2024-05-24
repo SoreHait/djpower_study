@@ -1,8 +1,11 @@
 from diff_coeff import diff_coeff
 
 
-def dj_power(diff: int, is_sc: bool):
-    print(diff_coeff(diff, is_sc))
+def djpower_pp(diff: int, is_sc: bool):
     return diff_coeff(diff, is_sc) * 2.22 + 2.31
 
-print(dj_power(7, False))
+if __name__ == '__main__':
+    diff = 14
+    is_sc = True
+    print(diff_coeff(diff, is_sc))
+    print(djpower_pp(diff, is_sc))

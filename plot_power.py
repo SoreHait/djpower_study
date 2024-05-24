@@ -9,7 +9,8 @@ diff_to_plot = [
     
 ]
 
-dataset = os.walk('data')
+#dataset = os.walk('data')
+dataset = os.walk('data_normalize')
 axis = plt.figure().add_subplot()
 # axis = plt.figure().add_subplot(projection='3d')
 # y_axis = 0
@@ -38,15 +39,12 @@ for root, _, files in dataset:
                     r_p_dpu[idx].append(r_p_dpu[idx-1][2])
         print(diff)
         print('\n'.join(map(str, r_p_dpu)))
-        axis.plot([x[0] for x in r_p_dpu], [x[1] for x in r_p_dpu], label=diff, marker='o')
-        # axis.plot([x[0] for x in r_p_dpu[1:]], [x[2] for x in r_p_dpu[1:]], label=diff, marker='o')
+        # axis.plot([x[0] for x in r_p_dpu], [x[1] for x in r_p_dpu], label=diff, marker='o')
+        axis.plot([x[0] for x in r_p_dpu[1:]], [x[2] for x in r_p_dpu[1:]], label=diff, marker='o')
         # axis.plot3D([x[0] for x in r_p_dpu], [y_axis] * len(r_p_dpu), [x[1] for x in r_p_dpu], label=diff, marker='o')
         # y_axis += 1
 
 x = np.arange(-1, 1, 0.001)
 
-# maybe it's a curve...
-# y = a tanh(b(x-95)+c)+d
-# axis.plot(x ** 3 + x + 95, x)
 axis.legend()
 plt.show()

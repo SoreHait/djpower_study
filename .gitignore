@@ -3,3 +3,5 @@ __pycache__
 .localized
 .idea
 .vscode
+data_normalize
+test.py

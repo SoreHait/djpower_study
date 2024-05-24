@@ -8,4 +8,4 @@ def diff_coeff(diff: int, is_sc: bool):
         return diff * 2
 
 if __name__ == '__main__':
-    print(diff_coeff(10, True))
+    print(diff_coeff(14, True))
