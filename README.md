@@ -20,4 +20,12 @@
 
 认为有可能是tanh，参数规律未知
 
-`djpower.py`计算的是在rate=100%时的djpower
+### 关于其余文件
+
+`diff_coeff.py`计算的是所谓难度系数
+
+`djpower_perfect.py`计算的是在rate=100%时的djpower
+
+`kr_algorithm.py`是从[韩国论坛](https://gall.dcinside.com/mgallery/board/view/?id=djmaxrespect&no=626587)上搞来的，但我认为这个分段曲线不太对劲。。。
+
+`plot_power.py`是本研究项目的主要程序
